@@ -26,11 +26,11 @@
           <a href="" class="home hide-mobile">Home</a>
         </div>
         <nav>
-          <a href="" class="menu-open hide-desktop">
+          <a href="#" class="menu-open hide-desktop">
             <img src="menu.svg" alt="" />
           </a>
           <ul>
-            <li class="first-li">
+            <li>
               <a class="menu-close" href=""><img src="close.svg" alt="" /></a>
             </li>
             <li><a href="">Our Food</a></li>
@@ -58,5 +58,21 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const menu = document.querySelector("nav ul");
+      const menuBtn = document.querySelector(".menu-open");
+      const closeBtn = document.querySelector(".menu-close");
+
+      menuBtn.addEventListener("click", () => {
+        // console.log("hell yeah");
+        menu.classList.add("open");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        // console.log("hell yeah");
+        menu.classList.remove("open");
+      });
+    </script>
   </body>
 </html>
